@@ -1,4 +1,4 @@
-![img](https://github.com/KaburaJ/Kenya-Sign-Language/tree/main/Images)
+![img](https://github.com/KaburaJ/Kenya-Sign-Language/tree/main/Images/Capture3.png)
 
 
 # Kenya-Sign-Language
