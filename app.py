@@ -41,7 +41,7 @@ def show_likelihood(pred_label):
 def main():
     st.set_page_config(page_title="Image Classification App", page_icon=":camera:", layout="wide")
 
-    st.write("# Image Classification App")
+    st.write("# KSL Image Classification App")
     st.write("This app allows you to upload an image and have it classified by a trained machine learning model.")
 
     uploaded_file = st.file_uploader("Upload an image", type=["jpg", "png", "jpeg"])
