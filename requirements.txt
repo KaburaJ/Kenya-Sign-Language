@@ -1,7 +1,5 @@
-os
-streamlit 
-numpy 
-PIL.Image
-fastai 
-pathlib
-matplotlib
+fastai==2.7.10
+matplotlib==3.6.3
+numpy==1.23.5
+Pillow==9.4.0
+streamlit==1.18.1
