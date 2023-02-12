@@ -6,11 +6,11 @@ import PIL.Image
 from fastai.vision.all import * 
 import pathlib
 
-import matplotlib.pyplot as plt
+import matplotlib.pyplot as pt
 
-
-temp = pathlib.PosixPath
-pathlib.PosixPath = pathlib.WindowsPath
+import pathlib
+plt = platform.system()
+if plt == 'Windows': pathlib.PosixPath = pathlib.WindowsPath
 
 model = load_learner('ksl_model.pkl')
 
@@ -29,17 +29,17 @@ def show_likelihood(pred_label):
     class_probs = pred_label[2].numpy()
     classes = ["Temple", "You", "Me", "You", "Friend", "Love", "Enough", "Church","Mosque"]
     class_labels = [classes[i] for i in range(len(class_probs))]
-    fig = plt.figure(figsize=(10, 10))
-    plt.barh(class_labels, class_probs)
-    plt.ylabel("Class")
-    plt.xlabel("Probability")
-    plt.title("Class Probabilities")
-    plt.xlim(0, 1)
-    plt.ylim(-1, len(class_probs))
+    fig = pt.figure(figsize=(10, 10))
+    pt.barh(class_labels, class_probs)
+    pt.ylabel("Class")
+    pt.xlabel("Probability")
+    pt.title("Class Probabilities")
+    pt.xlim(0, 1)
+    pt.ylim(-1, len(class_probs))
     st.pyplot(fig)
 
 def main():
-    st.set_page_config(page_title="Image Classification App", page_icon=":camera:", layout="wide")
+    st.image('ksl1.jpg')
 
     st.write("# KSL Image Classification App")
     st.write("This app allows you to upload an image and have it classified by a trained machine learning model.")
